@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Ramo de Tulipanes Rosas Animado</title>
+<style>
+  body {
+    margin: 0;
+    background: linear-gradient(to bottom, #fce4ec, #fde7f0);
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #444;
+  }
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+    animation-delay: 1s;
+  }
+  @keyframes fadeInText {
+    to { opacity: 1; }
+  }
+  .ramo {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+  }
+  svg {
+    width: 70px;
+    cursor: pointer;
+    transform-origin: bottom center;
+    animation: mecer 3s ease-in-out infinite alternate;
+  }
+  /* Diferentes delays para el mecido */
+  svg:nth-child(odd) { animation-delay: 0s; }
+  svg:nth-child(even) { animation-delay: 0.5s; }
+  @keyframes mecer {
+    0% { transform: rotate(-5deg) translateY(0); }
+    100% { transform: rotate(5deg) translateY(-5px); }
+  }
+  /* Botón música */
+  #musicControl {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    background-color: #f48fb1;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  #musicControl:hover {
+    background-color: #ec407a;
+  }
+  /* Pétalos */
+  .petalo {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle at 30% 30%, #f48fb1, #ec407a);
+    opacity: 0.8;
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+    pointer-events: none;
+    animation-timing-function: linear;
+    z-index: 10;
+  }
+</style>
+</head>
+<body>
+  <h1>Bienvenido a mi rincón floral</h1>
+
+  <div class="ramo" aria-label="Ramo de 10 tulipanes rosas">
+    <!-- 10 tulipanes rosas SVG -->
+    <!-- Puedes copiar y pegar para más, cambiando colores o delays -->
+    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="38" y="60" width="4" height="60" fill="#AD5D67"/>
+      <path d="M40 10 C30 30, 30 50, 40 60 C50 50, 50 30, 40 10 Z" fill="#F8BBD0"/>
+      <path d="M40 10 C25 25, 35 50, 40 60" fill="#F48FB1"/>
+      <path d="M40 10 C55 25, 45 50, 40 60" fill="#F48FB1"/>
+    </svg>
+
+    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="38" y="60" width="4" height="60" fill="#B36A77"/>
+      <path d="M40 10 C30 30, 30 50, 40 60 C50 50, 50 30, 40 10 Z" fill="#F48FB1"/>
+      <path d="M40 10 C25 25, 35 50, 40 60" fill="#EC407A"/>
+      <path d="M40 10 C55 25, 45 50, 40 60" fill="#EC407A"/>
+    </svg>
+
+    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="38" y="60" width="4" height="60" fill="#9E4A5A"/>
+      <path d="M40 10 C30 30, 30 50, 40 60 C50 50, 50 30, 40 10 Z" fill="#FCE4EC"/>
+      <path d="M40 10 C25 25, 35 50, 40 60" fill="#F8BBD0"/>
+      <path d="M40 10 C55 25, 45 50, 40 60" fill="#F8BBD0"/>
+    </svg>
+
+    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="38" y="60" width="4" height="60" fill="#B36A77"/>
+      <path d="M40 10 C30 30, 30 50, 40 60 C50 50, 50 30, 40 10 Z" fill="#F48FB1"/>
+      <path d="M40 10 C25 25, 35 50, 40 60" fill="#EC407A"/>
+      <path d="M40 10 C55 25, 45 50, 40 60" fill="#EC407A"/>
+    </svg>
+
+    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="38" y="60" width="4" height="60" fill="#9E4A5A"/>
+      <path d="M40 10 C30 30, 30 50, 40 60 C50 50, 50 30, 40 10 Z" fill="#FCE4EC"/>
+      <path d="M40 10 C25 25, 35 50, 40 60" fill="#F8BBD0"/>
+      <path d="M40 10 C55 25, 45 50, 40 60" fill="#F8BBD0"/>
+    </svg>
+
+    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="38" y="60" width="4" height="60" fill="#AD5D67"/>
+      <path d="M40 10 C30 30, 30 50, 40 60 C50 50, 50 30, 40 10 Z" fill="#F8BBD0"/>
+      <path d="M40 10 C25 25, 35 50, 40 60" fill="#F48FB1"/>
+      <path d="M40 10 C55 25, 45 50, 40 60" fill="#F48FB1"/>
+    </svg>
+
+    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="38" y="60" width="4" height="60" fill="#B36A77"/>
+      <path d="M40 10 C30 30, 30 50, 40 60 C50 50, 50 30, 40 10 Z" fill="#F48FB1"/>
+      <path d="M40 10 C25 25, 35 50, 40 60" fill="#EC407A"/>
+      <path d="M40 10 C55 25, 45 50, 40 60" fill="#EC407A"/>
+    </svg>
+
+    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="38" y="60" width="4" height="60" fill="#9E4A5A"/>
+      <path d="M40 10 C30 30, 30 50, 40 60 C50 50, 50 30, 40 10 Z" fill="#FCE4EC"/>
+      <path d="M40 10 C25 25, 35 50, 40 60" fill="#F8BBD0"/>
+      <path d="M40 10 C55 25, 45 50, 40 60" fill="#F8BBD0"/>
+    </svg>
+
+    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="38" y="60" width="4" height="60" fill="#AD5D67"/>
+      <path d="M40 10 C30 30, 30 50, 40 60 C50 50, 50 30, 40 10 Z" fill="#F8BBD0"/>
+      <path d="M40 10 C25 25, 35 50, 40 60" fill="#F48FB1"/>
+      <path d="M40 10 C55 25, 45 50, 40 60" fill="#F48FB1"/>
+    </svg>
+
+    <svg viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="38" y="60" width="4" height="60" fill="#B36A77"/>
+      <path d="M40 10 C30 30, 30 50, 40 60 C50 50, 50 30, 40 10 Z" fill="#F48FB1"/>
+      <path d="M40 10 C25 25, 35 50, 40 60" fill="#EC407A"/>
+      <path d="M40 10 C55 25, 45 50, 40 60" fill="#EC407A"/>
+    </svg>
+  </div>
+
+  <button id="musicControl">?? Pausar música</button>
+
+  <!-- Música de fondo -->
+  <audio
+    id="music"
+    src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_41531a7e2b.mp3?filename=relaxing-morning-ambient-6259.mp3"
+    autoplay
+    loop
+  ></audio>
+
+  <script>
+    // Música volumen y control
+    const music = document.getElementById('music');
+    music.volume = 0.3;
+
+    const btn = document.getElementById('musicControl');
+    btn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+        btn.textContent = "?? Pausar música";
+      } else {
+        music.pause();
+        btn.textContent = "?? Reproducir música";
+      }
+    });
+
+    // Crear pétalos cayendo
+    function crearPetalo() {
+      const petalo = document.createElement('div');
+      petalo.classList.add('petalo');
+      petalo.style.left = Math.random() * window.innerWidth + 'px';
+      petalo.style.top = '-20px';
+      petalo.style.width = 10 + Math.random() * 15 + 'px';
+      petalo.style.height = petalo.style.width;
+      document.body.appendChild(petalo);
+
+      const duracion = 7 + Math.random() * 5;
+      const movimientoX = (Math.random() - 0.5) * 100;
+
+      petalo.animate(
+        [
+          { transform: 'translate(0, 0) rotate(0deg)', opacity: 0.8 },
+          { transform: `translate(${movimientoX}px, 100vh) rotate(360deg)`, opacity: 0 }
+        ],
+        {
+          duration: duracion * 1000,
+          easing: 'linear'
+        }
+      );
+
+      setTimeout(() => {
+        petalo.remove();
+      }, duracion * 1000);
+    }
+
+    setInterval(crearPetalo, 400);
+  </script>
+</body>
+</html>
